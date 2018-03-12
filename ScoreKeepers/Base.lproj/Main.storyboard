@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oid-Xj-CIF">
-                                <rect key="frame" x="144" y="40" width="87.5" height="30"/>
+                                <rect key="frame" x="144.5" y="40" width="87.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,10 +27,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xp-Fl-2fd">
                                 <rect key="frame" x="42" y="80" width="75" height="30"/>
                                 <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="pressedNewGasme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUy-ct-OZI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D9-Cv-Fww">
                                 <rect key="frame" x="237" y="80" width="85" height="30"/>
                                 <state key="normal" title="Enter Round"/>
+                                <connections>
+                                    <action selector="pressedEnterRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uc6-hp-q4T"/>
+                                </connections>
                             </button>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-M7-jFs">
                                 <rect key="frame" x="0.0" y="118" width="375" height="42"/>
@@ -187,6 +193,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bvl-gQ-ICC"/>
                     </view>
+                    <connections>
+                        <outlet property="player1ScoreTextField" destination="ORQ-Iu-Nnz" id="wHM-at-OS2"/>
+                        <outlet property="player1ScoreTextView" destination="IEf-U3-axv" id="xqG-z5-ELf"/>
+                        <outlet property="player2ScoreTextField" destination="1Zn-Oe-aeV" id="OYH-1D-s1t"/>
+                        <outlet property="player2ScoreTextView" destination="vdU-0R-6Zf" id="spM-9M-qhe"/>
+                        <outlet property="player3ScoreTextField" destination="xfd-E9-e9y" id="uSe-rB-r2o"/>
+                        <outlet property="player3ScoreTextView" destination="bYS-nq-en6" id="tZE-Y3-nEM"/>
+                        <outlet property="player4ScoreTextField" destination="0qp-AT-xav" id="aiu-SX-jqr"/>
+                        <outlet property="player4ScoreTextView" destination="53g-k4-USw" id="9VI-SX-BFz"/>
+                        <outlet property="roundLabel" destination="Oid-Xj-CIF" id="1ym-SY-P8c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
