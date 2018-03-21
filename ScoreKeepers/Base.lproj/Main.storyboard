@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ObjC Score Keeper View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoreKeepers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ObjCScoreKeeperViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="t42-K4-Njy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -28,14 +28,9 @@
                                 <rect key="frame" x="42" y="80" width="75" height="30"/>
                                 <state key="normal" title="New Game"/>
                                 <connections>
+                                    <action selector="pressedNewGame:" destination="DJP-MX-XU9" eventType="touchUpInside" id="7or-Ee-xty"/>
+                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zo0-8X-g6z"/>
                                     <action selector="pressedNewGasme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUy-ct-OZI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D9-Cv-Fww">
-                                <rect key="frame" x="237" y="80" width="85" height="30"/>
-                                <state key="normal" title="Enter Round"/>
-                                <connections>
-                                    <action selector="pressedEnterRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uc6-hp-q4T"/>
                                 </connections>
                             </button>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-M7-jFs">
@@ -162,6 +157,14 @@
                                     <constraint firstItem="vdU-0R-6Zf" firstAttribute="width" secondItem="bYS-nq-en6" secondAttribute="width" id="zvU-kH-k5w"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D9-Cv-Fww">
+                                <rect key="frame" x="237" y="80" width="85" height="30"/>
+                                <state key="normal" title="Enter Round"/>
+                                <connections>
+                                    <action selector="pressedEnterRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uc6-hp-q4T"/>
+                                    <action selector="pressedEnterRound:" destination="DJP-MX-XU9" eventType="touchUpInside" id="bEx-mY-4CA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -190,18 +193,19 @@
                         <viewLayoutGuide key="safeArea" id="Bvl-gQ-ICC"/>
                     </view>
                     <connections>
-                        <outlet property="player1ScoreTextField" destination="ORQ-Iu-Nnz" id="wHM-at-OS2"/>
-                        <outlet property="player1ScoreTextView" destination="IEf-U3-axv" id="xqG-z5-ELf"/>
-                        <outlet property="player2ScoreTextField" destination="1Zn-Oe-aeV" id="OYH-1D-s1t"/>
-                        <outlet property="player2ScoreTextView" destination="vdU-0R-6Zf" id="spM-9M-qhe"/>
-                        <outlet property="player3ScoreTextField" destination="xfd-E9-e9y" id="uSe-rB-r2o"/>
-                        <outlet property="player3ScoreTextView" destination="bYS-nq-en6" id="tZE-Y3-nEM"/>
-                        <outlet property="player4ScoreTextField" destination="0qp-AT-xav" id="aiu-SX-jqr"/>
-                        <outlet property="player4ScoreTextView" destination="53g-k4-USw" id="9VI-SX-BFz"/>
-                        <outlet property="roundLabel" destination="Oid-Xj-CIF" id="1ym-SY-P8c"/>
+                        <outlet property="player1ScoreTextField" destination="ORQ-Iu-Nnz" id="MSr-1W-5o2"/>
+                        <outlet property="player1ScoreTextView" destination="IEf-U3-axv" id="mBO-z8-bgA"/>
+                        <outlet property="player2ScoreTextField" destination="1Zn-Oe-aeV" id="jBe-MI-bCQ"/>
+                        <outlet property="player2ScoreTextView" destination="vdU-0R-6Zf" id="1wh-UY-b81"/>
+                        <outlet property="player3ScoreTextField" destination="xfd-E9-e9y" id="deF-bf-RgW"/>
+                        <outlet property="player3ScoreTextView" destination="bYS-nq-en6" id="amb-RB-Igv"/>
+                        <outlet property="player4ScoreTextField" destination="0qp-AT-xav" id="Jsc-y4-EK4"/>
+                        <outlet property="player4ScoreTextView" destination="53g-k4-USw" id="N0R-Vt-cKU"/>
+                        <outlet property="roundLabel" destination="Oid-Xj-CIF" id="88W-jV-CrD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="DJP-MX-XU9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
