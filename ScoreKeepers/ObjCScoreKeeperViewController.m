@@ -8,6 +8,11 @@
 
 #import "ObjCScoreKeeperViewController.h"
 
+int player1Score = 0;
+int player2Score = 0;
+int player3Score = 0;
+int player4Score = 0;
+
 @implementation ObjCScoreKeeperViewController
 
 - (void)viewDidLoad {
@@ -37,10 +42,16 @@
     int player3RoundScore = [self.player3ScoreTextField.text intValue];
     int player4RoundScore = [self.player4ScoreTextField.text intValue];
     
-    self.player1ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player1RoundScore, self.player1ScoreTextView.text];
-    self.player2ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player2RoundScore, self.player2ScoreTextView.text];
-    self.player3ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player3RoundScore, self.player3ScoreTextView.text];
-    self.player4ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player4RoundScore, self.player4ScoreTextView.text];
+    player1Score = player1Score + player1RoundScore;
+    player2Score = player2Score + player2RoundScore;
+    player3Score = player3Score + player3RoundScore;
+    player4Score = player4Score + player4RoundScore;
+    
+    
+    self.player1ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player1Score, self.player1ScoreTextView.text];
+    self.player2ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player2Score, self.player2ScoreTextView.text];
+    self.player3ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player3Score, self.player3ScoreTextView.text];
+    self.player4ScoreTextView.text = [NSString stringWithFormat:@"%d\n%@",player4Score, self.player4ScoreTextView.text];
     
     [self clearPlayerEditTextFields];
 }
