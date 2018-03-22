@@ -16,6 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"view did load");
+    self.player1ScoreTextView.text = @"";
+    self.player2ScoreTextView.text = @"";
+    self.player3ScoreTextView.text = @"";
+    self.player4ScoreTextView.text = @"";
+    
+    
     
 }
 
@@ -25,10 +32,11 @@
 }
 
 - (IBAction)pressedEnterRound:(id) sender {
-
+    NSLog(@"pressed enter round");
 }
 
 - (IBAction)pressedNewGame:(id) sender {
+    NSLog(@"pressed New Game");
 
 }
 @end;
