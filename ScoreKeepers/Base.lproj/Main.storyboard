@@ -28,9 +28,7 @@
                                 <rect key="frame" x="42" y="80" width="75" height="30"/>
                                 <state key="normal" title="New Game"/>
                                 <connections>
-                                    <action selector="pressedNewGame:" destination="DJP-MX-XU9" eventType="touchUpInside" id="7or-Ee-xty"/>
-                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zo0-8X-g6z"/>
-                                    <action selector="pressedNewGasme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUy-ct-OZI"/>
+                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUL-xA-pVe"/>
                                 </connections>
                             </button>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-M7-jFs">

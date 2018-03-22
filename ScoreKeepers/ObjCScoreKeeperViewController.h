@@ -25,8 +25,8 @@
 
 - (IBAction)pressedEnterRound:(id)sender;
 
-
 - (IBAction)pressedNewGame:(id)sender;
+
 
 
 @end
